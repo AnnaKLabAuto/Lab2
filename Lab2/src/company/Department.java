@@ -1,4 +1,4 @@
-package nonamecompany.model.company;
+package company;
 
 public class Department {
     private String name;

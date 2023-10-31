@@ -1,4 +1,4 @@
-package nonamecompany.model.projects;
+package client;
 
 public class Client {
     private String firstName;

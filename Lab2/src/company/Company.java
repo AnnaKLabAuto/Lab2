@@ -1,4 +1,4 @@
-package nonamecompany.model.company;
+package company;
 
 import java.util.List;
 

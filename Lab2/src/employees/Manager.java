@@ -1,4 +1,5 @@
-package managment.model;
+package employees;
+
 import java.util.ArrayList;
 import java.util.Objects;
 
@@ -60,7 +61,7 @@ public class Manager {
 
     @Override
     public String toString() {
-        return "Manager{" +
+        return "employees.Manager{" +
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", department='" + department + '\'' +

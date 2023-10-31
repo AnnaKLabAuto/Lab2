@@ -1,7 +1,7 @@
-import nonamecompany.model.projects.Project;
-import nonamecompany.model.projects.Task;
-import managment.model.Employee;
-import managment.model.Manager;
+import employees.Employee;
+import employees.Manager;
+import product.Project;
+import product.Task;
 
 import java.util.ArrayList;
 import java.util.List;

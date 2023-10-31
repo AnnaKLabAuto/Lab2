@@ -1,5 +1,5 @@
-package managment.service;
-import managment.model.Employee;
+import employees.Employee;
+
 import java.util.ArrayList;
 
 public class EmployeeService {

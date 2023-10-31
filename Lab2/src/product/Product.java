@@ -1,11 +1,11 @@
-package nonamecompany.model.projects;
+package product;
 
-public class Task {
+public class Product {
 
     private String name;
     private String description;
 
-    public Task(String name, String description) {
+    public Product(String name, String description) {
         this.name = name;
         this.description = description;
     }
@@ -25,4 +25,5 @@ public class Task {
     public void setDescription(String description) {
         this.description = description;
     }
+
 }

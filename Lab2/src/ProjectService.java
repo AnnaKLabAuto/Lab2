@@ -1,5 +1,5 @@
-package nonamecompany.service;
-import nonamecompany.model.projects.Task;
+import product.Task;
+
 import java.util.List;
 
 public class ProjectService {

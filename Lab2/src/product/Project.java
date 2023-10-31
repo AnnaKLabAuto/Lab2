@@ -1,4 +1,4 @@
-package nonamecompany.model.projects;
+package product;
 
 import java.util.ArrayList;
 
@@ -42,7 +42,7 @@ public class Project {
 
     @Override
     public String toString() {
-        return "Project{" +
+        return "product.Project{" +
                 "name='" + name + '\'' +
                 ", description='" + description + '\'' +
                 ", tasks=" + tasks +
