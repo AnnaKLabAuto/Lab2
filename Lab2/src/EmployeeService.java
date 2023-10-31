@@ -5,16 +5,17 @@ import java.util.ArrayList;
 public class EmployeeService {
 
     private ArrayList<Employee> employeeList;
+
     public EmployeeService() {
         employeeList = new ArrayList<>();
     }
 
     public void addEmployee(Employee employee) {
-        System.out.println("Add employee");
+        employeeList.add(employee);
     }
 
     public void deleteEmployee(Employee employee) {
-        System.out.println("Remove employee");
+        employeeList.remove(employee);
     }
 
     public void displayEmployeeInfo() {

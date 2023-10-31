@@ -1,3 +1,4 @@
+import company.Department;
 import employees.Employee;
 import employees.Manager;
 import product.Project;
@@ -9,26 +10,34 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
-        Employee employee1 = new Employee("Franziska" , "Waltraud", "IT", "Developer");
-        Employee employee2 = new Employee("Hubertus", "Andrea","IT", "Software Engineer");
+        Department it_department = new Department("IT", "Information Technology Department");
+
+        Employee employee1 = new Employee("Franziska" , "Waltraud", it_department, "Developer");
+        Employee employee2 = new Employee("Hubertus", "Andrea", it_department, "Software Engineer");
 
         List<Employee> employeeList = new ArrayList<>();
         employeeList.add(employee1);
         employeeList.add(employee2);
 
-        Manager manager1 = new Manager("Tomas", "Andrea","IT", "Team Leader", new ArrayList<>(employeeList));
+        Manager manager1 = new Manager("Tomas", "Andrea", it_department, "Team Leader", employeeList);
 
         Task task1 = new Task("Add button", "Adding button to interface");
         Task task2 = new Task("Add button2", "Adding button2 to interface");
 
         List<Task> tasks = new ArrayList<>();
-        tasks .add(task1);
-        tasks .add(task2);
+        tasks.add(task1);
+        tasks.add(task2);
 
-        Project project = new Project("TicketApp", "App for buying tickets.", new ArrayList<>(tasks));
+        Project project = new Project("TicketApp", "App for buying tickets.", tasks, employeeList);
 
-        System.out.println(project);
-        System.out.println(manager1);
+        EmployeeService employeeService = new EmployeeService();
+        employeeService.addEmployee(employee1);
+        employeeService.displayEmployeeInfo();
+
+        ProjectService projectService = new ProjectService(project);
+        projectService.addTaskToProject(project, task1);
+        projectService.addEmployeeToProject(project, employee1);
+        projectService.displayProjectInfo(project);
 
     }
 }

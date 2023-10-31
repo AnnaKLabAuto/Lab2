@@ -1,17 +1,29 @@
+import employees.Employee;
+import employees.Manager;
+import product.Project;
 import product.Task;
 
 import java.util.List;
 
 public class ProjectService {
 
-    public void createProject(String name, String description, List<Task> tasks) {
-        System.out.println("Create project");
-    }
-    public void editProject(String name, String description) {
-        System.out.println("Edit project");
-    }
-    public void deleteProject() {
-        System.out.println("Remove project");
+    private Project projects;
+
+    public ProjectService(Project projects) {
+        this.projects = projects;
     }
 
+    public void addTaskToProject(Project project, Task task) {
+        project.addTask(task);
+        System.out.println("Added task to project: " + project.getName());
+    }
+
+    public void addEmployeeToProject(Project project, Employee employee) {
+        project.addEmployee(employee);
+        System.out.println("Added employee to project: " + employee.getFirstName() + " " + employee.getLastName());
+    }
+
+    public void displayProjectInfo(Project project) {
+        System.out.println("Project Information: " + project);
+    }
 }

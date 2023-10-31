@@ -1,43 +1,45 @@
 package product;
 
+import employees.Employee;
+import employees.Manager;
+
 import java.util.ArrayList;
 
+import java.util.List;
 import java.util.Objects;
 
 public class Project {
 
     private String name;
     private String description;
-    private ArrayList<Task> tasks;
+    private List<Task> tasks;
+    private List<Employee> employeeList;
 
-    public Project(String name, String description, ArrayList<Task> tasks) {
+    public Project(String name, String description, List<Task> tasks, List<Employee> employeeList) {
         this.name = name;
         this.description = description;
         this.tasks = tasks;
+        this.employeeList = employeeList;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getDescription() {
         return description;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public ArrayList<Task> getTasks() {
+    public List<Task> getTasks() {
         return tasks;
     }
 
-    public void setTasks(ArrayList<Task> tasks) {
-        this.tasks = tasks;
+    public void addTask(Task task) {
+        tasks.add(task);
+    }
+
+    public void addEmployee(Employee employee) {
+        employeeList.add(employee);
     }
 
     @Override
