@@ -7,23 +7,23 @@ import java.util.List;
 
 public class ProjectService {
 
-    private Project projects;
+    private Project project;
 
-    public ProjectService(Project projects) {
-        this.projects = projects;
+    public ProjectService(Project project) {
+        this.project = project;
     }
 
-    public void addTaskToProject(Project project, Task task) {
+    public void addTaskToProject(Task task) {
         project.addTask(task);
         System.out.println("Added task to project: " + project.getName());
     }
 
-    public void addEmployeeToProject(Project project, Employee employee) {
+    public void addEmployeeToProject(Employee employee) {
         project.addEmployee(employee);
         System.out.println("Added employee to project: " + employee.getFirstName() + " " + employee.getLastName());
     }
 
-    public void displayProjectInfo(Project project) {
+    public void displayProjectInfo() {
         System.out.println("Project Information: " + project);
     }
 }
